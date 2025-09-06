@@ -144,6 +144,7 @@ namespace dragon_app
             }
 
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             byte[] temp = new byte[1];
@@ -200,14 +201,6 @@ namespace dragon_app
                         //判断是否需要发送新行
                         if (checkBox2.Checked)
                         {
-                            //自动发送新行
-                            //string buf = textBox_send.Text;
-                            //string pattern = @"\s";
-                            //string replacement = "";
-                            //Regex rgx = new Regex(pattern);
-                            //string send_data = rgx.Replace(buf, replacement);
-                            //serialPort1.WriteLine(send_data);
-
                             serialPort1.WriteLine(textBox_send.Text);
                             //byte[] _r = new byte[] { 0x0D };
                             //byte[] _n = new byte[] { 0x0A };
@@ -276,23 +269,7 @@ namespace dragon_app
 
         private void SerialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            //try
-            //{
-            //    //因为要访问UI资源，所以需要使用invoke方式同步ui
-            //    this.Invoke((EventHandler)(delegate
-            //    {
-            //        textBox_receive.AppendText("R：" + serialPort1.ReadExisting() + "\r\n");
-            //    }
-            //       )
-            //    );
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    //响铃并显示异常给用户
-            //    System.Media.SystemSounds.Beep.Play();
-            //    MessageBox.Show(ex.Message);
-            //}
             //下面的代码是一些接收字节计数的处理
             int num = serialPort1.BytesToRead;      //获取接收缓冲区中的字节数
             byte[] received_buf = new byte[num];    //声明一个大小为num的字节数据用于存放读出的byte型数据
