@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\C#PRJ\\dragon_app_uart_assitant\\dragon_app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|E:\\C#PRJ\\dragon_app_uart_assitant\\dragon_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|e:\\c#prj\\dragon_app_uart_assitant\\dragon_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,11 +11,11 @@
       "RelativeMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|e:\\c#prj\\dragon_app_uart_assitant\\dragon_app\\motor_select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|E:\\C#PRJ\\dragon_app_uart_assitant\\dragon_app\\motor_select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|solutionrelative:motor_select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|e:\\c#prj\\dragon_app_uart_assitant\\dragon_app\\motor_select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|E:\\C#PRJ\\dragon_app_uart_assitant\\dragon_app\\motor_select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DE0F280-4FB9-4ABA-B25C-6861B260D4F6}|dragon_app.csproj|solutionrelative:motor_select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Motor_Select.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T05:28:02.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T05:28:02.061Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T05:23:24.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T05:23:24.01Z"
             },
             {
               "$type": "Document",
@@ -79,8 +77,7 @@
               "ToolTip": "E:\\C#PRJ\\dragon_app_uart_assitant\\dragon_app\\Motor_Select.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "Motor_Select.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T05:15:28.722Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "WhenOpened": "2025-09-06T05:15:28.722Z"
             },
             {
               "$type": "Document",
