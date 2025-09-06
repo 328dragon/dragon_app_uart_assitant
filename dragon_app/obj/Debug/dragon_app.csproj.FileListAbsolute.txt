@@ -9,12 +9,11 @@ E:\C#PRJ\dragon_app\obj\Debug\dragon_app.exe
 E:\C#PRJ\dragon_app\obj\Debug\dragon_app.pdb
 E:\C#PRJ\dragon_app\obj\Debug\dragon_app.exe.config
 E:\C#PRJ\dragon_app\obj\Debug\dragon_app.Dragon_app.resources
-E:\C#PRJ\dragon_app_uart_assitant\dragon_app\bin\Debug\dragon_app.exe.config
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\bin\Debug\dragon_app.exe
-E:\C#PRJ\dragon_app_uart_assitant\dragon_app\bin\Debug\dragon_app.pdb
+E:\C#PRJ\dragon_app_uart_assitant\dragon_app\bin\Debug\dragon_app.exe.config
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.csproj.AssemblyReference.cache
-E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.exe.config
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.Dragon_app.resources
+E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.Motor_Control.resources
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.Properties.Resources.resources
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.csproj.GenerateResource.cache
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.csproj.CoreCompileInputs.cache

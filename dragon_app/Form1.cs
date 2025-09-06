@@ -384,5 +384,17 @@ namespace dragon_app
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_skip1_Click(object sender, EventArgs e)
+        {
+         //Motor_Control motor_Control = new Motor_Control();
+         //   motor_Control.Show();
+         //   this.Hide();    
+        }
     }
 }
