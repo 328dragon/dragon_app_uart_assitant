@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dragon_app
 {
-    public partial class Motor_Control : Form
+    public partial class Motor_Select : Form
     {
-        public Motor_Control()
+        public Motor_Select()
         {
             InitializeComponent();
         }
@@ -21,5 +21,7 @@ namespace dragon_app
         {
             System.Environment.Exit(0);
         }
+
+
     }
 }

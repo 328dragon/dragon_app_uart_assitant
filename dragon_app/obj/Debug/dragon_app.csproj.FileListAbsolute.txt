@@ -20,4 +20,4 @@ E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.csproj.Generat
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.csproj.CoreCompileInputs.cache
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.exe
 E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.pdb
-E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.Motor_Control.resources
+E:\C#PRJ\dragon_app_uart_assitant\dragon_app\obj\Debug\dragon_app.Motor_Select.resources

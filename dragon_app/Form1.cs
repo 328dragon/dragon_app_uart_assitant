@@ -387,9 +387,14 @@ namespace dragon_app
 
         private void Button_skip1_Click(object sender, EventArgs e)
         {
-            Motor_Control motor_Control = new Motor_Control();
-            motor_Control.Show();
+            Motor_Select motor_Select = new Motor_Select();
+            motor_Select.Show();
             this.Hide();
+        }
+
+        private void uart_tx_rx_closed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

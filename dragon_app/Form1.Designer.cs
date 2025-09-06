@@ -433,7 +433,7 @@
             this.Button_skip3.Name = "Button_skip3";
             this.Button_skip3.Size = new System.Drawing.Size(235, 78);
             this.Button_skip3.TabIndex = 4;
-            this.Button_skip3.Text = "整活模式";
+            this.Button_skip3.Text = "底盘控制";
             this.Button_skip3.UseVisualStyleBackColor = false;
             // 
             // Button_clear
@@ -541,6 +541,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Dragon_app";
             this.Text = "dragon_app";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.uart_tx_rx_closed);
             this.Load += new System.EventHandler(this.Dragon_app_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
