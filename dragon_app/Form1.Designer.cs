@@ -408,7 +408,7 @@
             this.textBox_uart_state.ForeColor = System.Drawing.Color.Red;
             this.textBox_uart_state.Location = new System.Drawing.Point(40, 46);
             this.textBox_uart_state.Name = "textBox_uart_state";
-            this.textBox_uart_state.Size = new System.Drawing.Size(199, 35);
+            this.textBox_uart_state.Size = new System.Drawing.Size(307, 35);
             this.textBox_uart_state.TabIndex = 11;
             this.textBox_uart_state.Text = "串口已关闭";
             this.textBox_uart_state.TextChanged += new System.EventHandler(this.textBox_uart_state_TextChanged);

@@ -296,6 +296,22 @@ namespace dragon_app
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox3.Checked)
+            {
+                //自动发送功能选中,开始自动发送
+                numericUpDown1.Enabled = false;     //失能时间选择
+                Timer2.Interval = (int)numericUpDown1.Value;     //定时器赋初值
+                Timer2.Start();     //启动定时器
+                textBox_uart_state.Text = "串口已打开" + " 自动发送中...";
+            }
+            else
+            {
+                //自动发送功能未选中,停止自动发送
+                numericUpDown1.Enabled = true;     //使能时间选择
+                Timer2.Stop();     //停止定时器
+                textBox_uart_state.Text = "串口已打开";
+
+            }
 
         }
 
@@ -355,7 +371,7 @@ namespace dragon_app
         //用于定时自动发送数据
         private void TIM2_UP_IRQHandler(object sender, EventArgs e)
         {
-
+            button2_Click(button2,new EventArgs());
 
         }
 
