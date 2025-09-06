@@ -16,5 +16,10 @@ namespace dragon_app
         {
             InitializeComponent();
         }
+
+        private void Motor_control_closed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }

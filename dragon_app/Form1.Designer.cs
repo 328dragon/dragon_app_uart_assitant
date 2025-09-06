@@ -71,7 +71,6 @@
             this.Timer2 = new System.Windows.Forms.Timer(this.components);
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -290,7 +289,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MistyRose;
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.button_clear_tx);
             this.panel3.Controls.Add(this.numericUpDown1);
             this.panel3.Controls.Add(this.checkBox3);
@@ -314,7 +312,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(209, 170);
+            this.numericUpDown1.Location = new System.Drawing.Point(232, 170);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -528,16 +526,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F);
-            this.textBox1.Location = new System.Drawing.Point(335, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 44);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "ms";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // Dragon_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -616,7 +604,6 @@
         private System.Windows.Forms.Timer Timer2;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 
 

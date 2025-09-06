@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(4093, 2173);
+            this.ClientSize = new System.Drawing.Size(2109, 1690);
             this.Name = "Motor_Control";
             this.Text = "Motor_Control";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Motor_control_closed);
             this.ResumeLayout(false);
 
         }
