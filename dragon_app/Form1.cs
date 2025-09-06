@@ -201,7 +201,7 @@ namespace dragon_app
                         //判断是否需要发送新行
                         if (checkBox2.Checked)
                         {
-                            serialPort1.WriteLine(textBox_send.Text);
+                            serialPort1.Write(textBox_send.Text+"\r\n");
                             //byte[] _r = new byte[] { 0x0D };
                             //byte[] _n = new byte[] { 0x0A };
                             //serialPort1.Write(_r, 0, 1);
