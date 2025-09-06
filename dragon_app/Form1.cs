@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -155,20 +156,84 @@ namespace dragon_app
                     //串口处于开启状态，将发送区文本发送
                     if (radioButton4.Checked)
                     {
+                        //以HEX模式发送
+                        //首先需要用正则表达式将用户输入字符中的十六进制字符匹配出来
+                        string buf = textBox_send.Text;
+                        string pattern = @"\s";
+                        string replacement = "";
+                        Regex rgx = new Regex(pattern);
+                        string send_data = rgx.Replace(buf, replacement);
+                        //不发送新行
+                        num = (send_data.Length - send_data.Length % 2) / 2;
+                      
+                        for (int i = 0; i < num; i++)
+                        {
+                            temp[0] = Convert.ToByte(send_data.Substring(i * 2, 2), 16);
+                            serialPort1.Write(temp, 0, 1);  //循环发送
+                        
+                        }
+                        //如果用户输入的字符是奇数，则单独处理
+                        if (send_data.Length % 2 != 0)
+                        {
+                            temp[0] = Convert.ToByte(send_data.Substring(textBox_send.Text.Length - 1, 1), 16);
+                           
+                            serialPort1.Write(temp, 0, 1);
+                            
+                            num++;
+                        }
+                        textBox_receive.AppendText("T：" + textBox_send.Text);//显示应该也要以Hex显示
 
+                        if (checkBox2.Checked)
+                        {
+                            //自动发送新行
+                            byte[] _r = new byte[] { 0x0D };
+                            byte[] _n = new byte[] { 0x0A };
+                            serialPort1.Write(_r, 0, 1);
+                            serialPort1.Write(_n, 0, 1);
+                            textBox_receive.AppendText("\r\n");
+                            num += 2;//回车占两个字节
+                        }
                     }
                     else
                     {
+                        //以ASCII模式发送
+                        //判断是否需要发送新行
+                        if (checkBox2.Checked)
+                        {
+                            //自动发送新行
+                            //string buf = textBox_send.Text;
+                            //string pattern = @"\s";
+                            //string replacement = "";
+                            //Regex rgx = new Regex(pattern);
+                            //string send_data = rgx.Replace(buf, replacement);
+                            //serialPort1.WriteLine(send_data);
 
-
+                            serialPort1.WriteLine(textBox_send.Text);
+                            //byte[] _r = new byte[] { 0x0D };
+                            //byte[] _n = new byte[] { 0x0A };
+                            //serialPort1.Write(_r, 0, 1);
+                            //serialPort1.Write(_n, 0, 1);
+                            textBox_receive.AppendText("T：" + textBox_send.Text + "\r\n");                           
+                            num = textBox_send.Text.Length + 2; //回车占两个字节
+                        }
+                        else
+                        {
+                            //不发送新行
+                            serialPort1.Write(textBox_send.Text);
+                            textBox_receive.AppendText("T：" + textBox_send.Text);
+                            num = textBox_send.Text.Length;
+                        }
                     }
 
-                    textBox_receive.AppendText("T：" + textBox_send.Text + "\r\n");
-                    serialPort1.Write(textBox_send.Text);
+                    //textBox_receive.AppendText("T：" + textBox_send.Text + "\r\n");
+                    //serialPort1.Write(textBox_send.Text);
+                    send_count += num;      //计数变量累加
+                    textBox_tx_count.Text = "Tx:" + send_count.ToString() + "Bytes";   //刷新界面
                 }
             }
             catch (Exception ex)
             {
+                serialPort1.Close();
                 //捕获到异常，创建一个新的对象，之前的不可以再用
                 serialPort1 = new System.IO.Ports.SerialPort();
                 //刷新COM口选项
@@ -184,9 +249,6 @@ namespace dragon_app
                 ComBox3.Enabled = true;
                 ComBox4.Enabled = true;
                 ComBox5.Enabled = true;
-
-
-
             }
 
         }
@@ -340,6 +402,8 @@ namespace dragon_app
         private void button_clear_tx_Click(object sender, EventArgs e)
         {
             textBox_send.Text = "";
+            send_count = 0;          //计数清零
+            textBox_tx_count.Text = "Tx:" + send_count.ToString() + "Bytes";
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -395,6 +459,11 @@ namespace dragon_app
         private void uart_tx_rx_closed(object sender, FormClosedEventArgs e)
         {
             System.Environment.Exit(0);
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

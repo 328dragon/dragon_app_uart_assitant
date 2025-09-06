@@ -344,6 +344,7 @@
             this.checkBox2.TabIndex = 8;
             this.checkBox2.Text = "发送新行";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // radioButton4
             // 
