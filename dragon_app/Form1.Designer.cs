@@ -71,6 +71,8 @@
             this.Timer2 = new System.Windows.Forms.Timer(this.components);
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            this.Timer_show = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -527,12 +529,25 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // formsPlot1
+            // 
+            this.formsPlot1.DisplayScale = 0F;
+            this.formsPlot1.Location = new System.Drawing.Point(1678, 1);
+            this.formsPlot1.Name = "formsPlot1";
+            this.formsPlot1.Size = new System.Drawing.Size(1467, 766);
+            this.formsPlot1.TabIndex = 7;
+            // 
+            // Timer_show
+            // 
+            this.Timer_show.Tick += new System.EventHandler(this.Timer_show_IRQHandler);
+            // 
             // Dragon_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1684, 1143);
+            this.ClientSize = new System.Drawing.Size(3143, 1143);
+            this.Controls.Add(this.formsPlot1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -606,6 +621,8 @@
         private System.Windows.Forms.Timer Timer2;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private ScottPlot.WinForms.FormsPlot formsPlot1;
+        private System.Windows.Forms.Timer Timer_show;
     }
 
 

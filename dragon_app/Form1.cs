@@ -23,8 +23,16 @@ namespace dragon_app
         public Dragon_app()
         {
             InitializeComponent();
-
+         
         }
+
+        public void LineChart()
+        {
+        
+            //formsPlot1.Plot.Add.Scatter(dataX, dataY);
+            //formsPlot1.Refresh();
+        }
+
         private void Dragon_app_Load(object sender, EventArgs e)
         {
             //获取电脑当前可用串口并添加到选项列表中
@@ -39,8 +47,6 @@ namespace dragon_app
             ComBox5.Items.AddRange(box_initial5);
             textBox_uart_state.Text = "串口已关闭";
             textBox_uart_state.ForeColor = Color.Red;
-
-
         }
 
 
@@ -80,8 +86,6 @@ namespace dragon_app
                     ComBox3.Enabled = true;
                     ComBox4.Enabled = true;
                     ComBox5.Enabled = true;
-                    //textBox_receive.Text = "";  //清空接收区
-                    //textBox_send.Text = "";     //清空发送区
                     textBox_uart_state.Text = "串口已关闭";
                     textBox_uart_state.ForeColor = Color.Red;
                 }
@@ -202,10 +206,6 @@ namespace dragon_app
                         if (checkBox2.Checked)
                         {
                             serialPort1.Write(textBox_send.Text+"\r\n");
-                            //byte[] _r = new byte[] { 0x0D };
-                            //byte[] _n = new byte[] { 0x0A };
-                            //serialPort1.Write(_r, 0, 1);
-                            //serialPort1.Write(_n, 0, 1);
                             textBox_receive.AppendText("T：" + textBox_send.Text + "\r\n");                           
                             num = textBox_send.Text.Length + 2; //回车占两个字节
                         }
@@ -217,9 +217,6 @@ namespace dragon_app
                             num = textBox_send.Text.Length;
                         }
                     }
-
-                    //textBox_receive.AppendText("T：" + textBox_send.Text + "\r\n");
-                    //serialPort1.Write(textBox_send.Text);
                     send_count += num;      //计数变量累加
                     textBox_tx_count.Text = "Tx:" + send_count.ToString() + "Bytes";   //刷新界面
                 }
@@ -278,11 +275,12 @@ namespace dragon_app
             serialPort1.Read(received_buf, 0, num);   //读取接收缓冲区中num个字节到byte数组中
                                                       //下面的代码是将读取到的字节数据转换为字符串并追加到接收区中           
             sb.Clear();     //防止出错,首先清空字符串构造器
-                            //遍历数组进行字符串转化及拼接
-                            //foreach (byte b in received_buf)
-                            //{
-                            //    sb.Append(Encoding.ASCII.GetString(received_buf));//按ASCII码转换
-                            //}
+            //遍历数组进行字符串转化及拼接
+            //foreach (byte b in received_buf).
+            //{
+            //    sb.Append(b.ToString());
+            //}
+
             if (radioButton2.Checked)
             {
                 //选中HEX模式显示
@@ -439,6 +437,11 @@ namespace dragon_app
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Timer_show_IRQHandler(object sender, EventArgs e)
         {
 
         }
